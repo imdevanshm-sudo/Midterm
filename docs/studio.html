@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lumen Studio - The Collective</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#0A0A0A",
+            accent: "#c03f0c",
+            "background-light": "#ffffff",
+            "background-dark": "#221510",
+            surface: "#F4F4F4",
+            muted: "#9CA3AF"
+          },
+          fontFamily: {
+            serif: ["Fraunces", "serif"],
+            sans: ["Manrope", "sans-serif"],
+            display: ["Fraunces", "serif"],
+            body: ["Manrope", "sans-serif"]
+          },
+          borderRadius: { DEFAULT: "0px", full: "9999px" }
+        }
+      }
+    };
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .nav-link { position: relative; }
+    .nav-link::after { content: ""; position: absolute; width: 0; height: 1px; bottom: -2px; left: 0; background-color: currentColor; transition: width .7s cubic-bezier(.25,1,.5,1); }
+    .nav-link:hover::after { width: 100%; }
+    #inquiry-modal { transition: transform .7s cubic-bezier(.25,1,.5,1); }
+    #inquiry-modal.open { transform: translateY(0); }
+    #inquiry-modal.closed { transform: translateY(100%); }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    .animate-fade-in { animation: fadeIn 1s ease-out forwards; }
+  </style>
+</head>
+<body class="bg-background-light text-primary font-body antialiased selection:bg-primary selection:text-white">
+  <header class="fixed top-0 left-0 w-full z-50 px-6 py-6 md:px-10 md:py-8 mix-blend-difference text-white pointer-events-none">
+    <div class="flex items-center justify-between w-full max-w-[1920px] mx-auto pointer-events-auto">
+      <div class="flex items-center gap-2"><span class="material-symbols-outlined text-2xl">lens_blur</span><a class="font-serif font-bold text-xl tracking-tight" href="./index.html">LUMEN</a></div>
+      <nav class="hidden md:flex items-center gap-8 md:gap-12">
+        <a class="nav-link font-medium text-sm tracking-wide" href="./archive.html">INDEX</a>
+        <a class="nav-link font-medium text-sm tracking-wide line-through" href="./studio.html">STUDIO</a>
+      </nav>
+      <button id="mobile-menu-toggle" class="md:hidden p-2" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="material-symbols-outlined text-3xl">menu</span>
+      </button>
+    </div>
+  </header>
+  <div id="mobile-menu" class="hidden fixed top-20 right-6 z-50 bg-black/70 text-white backdrop-blur-md p-4 space-y-3 text-sm uppercase tracking-wider">
+    <a class="block" href="./archive.html">Index</a>
+    <a class="block line-through" href="./studio.html">Studio</a>
+  </div>
+
+  <main class="flex flex-col lg:flex-row min-h-screen w-full">
+    <div class="relative w-full lg:w-1/2 h-[60vh] lg:h-screen lg:fixed lg:top-0 lg:left-0 z-0 bg-neutral-900 overflow-hidden">
+      <div class="absolute inset-0 bg-black/20 z-10"></div>
+      <img class="w-full h-full object-cover grayscale opacity-90 hover:scale-105 transition-transform duration-[2000ms] ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBww-vR9kuE7eFdjWyEC2Cy7zM9SgPJz-Ri_NuyLhM6ggJZ-ye4HloLaT2IcxmCEC25E2JvKFFcrdNN_ZsClCw9YHATKVpeJ6yHOqoYWnaQpNIICYOzfSdUoquKqVTpZObnMqblCBt_EZmE9XZih1jiFVQLCTMxXxBy6Qf53BjpXGlPiJ_-LoaHcFJuDOI7NHaZZ3RezFoH6cC-1RGPR11xXQQlN1OLNeuLNtvihxeixewdhntHw1Nt4Vs3AndKjoYf6C-qzw8kZrs" alt="Team portrait" />
+    </div>
+
+    <div class="w-full lg:w-1/2 lg:ml-[50%] bg-background-light relative z-10 min-h-screen">
+      <div class="px-6 py-20 md:px-16 md:py-32 lg:px-24 lg:py-40 max-w-3xl mx-auto flex flex-col gap-32">
+        <section class="flex flex-col gap-8 opacity-0 animate-fade-in" style="animation-delay: .2s;">
+          <span class="text-xs font-bold tracking-[0.25em] text-muted uppercase">The Collective</span>
+          <h1 class="font-serif text-4xl md:text-5xl lg:text-[3.5rem] leading-[1.1] font-light">We do not just shoot footage. We sculpt light.<span class="block mt-8 text-primary/80">We believe that brand identity is a narrative arc, not a logo placement.</span></h1>
+          <p class="text-lg md:text-xl text-primary/70 leading-relaxed">Lumen is a multidisciplinary studio operating at the intersection of cinema and commerce.</p>
+        </section>
+
+        <section class="flex flex-col gap-12">
+          <div class="w-full h-px bg-neutral-200"></div>
+          <span class="text-xs font-bold tracking-[0.25em] text-muted uppercase">Disciplines</span>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
+            <div class="flex flex-col gap-6 group"><h3 class="font-serif text-2xl font-light italic group-hover:text-accent">Pre-Prod</h3><ul class="flex flex-col gap-3 text-sm text-primary/70"><li>Creative Direction</li><li>Script Development</li><li>Storyboarding</li><li>Casting &amp; Locations</li></ul></div>
+            <div class="flex flex-col gap-6 group"><h3 class="font-serif text-2xl font-light italic group-hover:text-accent">Production</h3><ul class="flex flex-col gap-3 text-sm text-primary/70"><li>Principal Photography</li><li>Cinematography</li><li>Drone Operations</li><li>Set Design</li></ul></div>
+            <div class="flex flex-col gap-6 group"><h3 class="font-serif text-2xl font-light italic group-hover:text-accent">Post</h3><ul class="flex flex-col gap-3 text-sm text-primary/70"><li>Editorial</li><li>Color Grading</li><li>Sound Design</li><li>VFX &amp; Compositing</li></ul></div>
+          </div>
+        </section>
+
+        <section class="flex flex-col gap-8 pt-20">
+          <div class="w-full h-px bg-neutral-200"></div>
+          <span class="text-xs font-bold tracking-[0.25em] text-muted uppercase">Inquiry</span>
+          <p class="text-primary/60">Start a conversation.</p>
+          <a class="font-serif text-4xl md:text-6xl leading-none tracking-tight hover:text-accent" href="mailto:hello@lumen.studio">hello@lumen.studio</a>
+          <button id="open-inquiry-modal" class="group flex items-center gap-3 text-sm font-medium tracking-wide border-b border-primary/20 pb-1 hover:border-accent" type="button"><span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span><span class="group-hover:text-accent">START A PROJECT</span></button>
+          <div class="pt-20 pb-10 flex flex-col md:flex-row justify-between text-xs text-muted uppercase tracking-widest gap-4"><p>© 2026 Lumen Studio.</p><div class="flex gap-6"><a href="#">Instagram</a><a href="#">Vimeo</a><a href="#">LinkedIn</a></div></div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <div id="inquiry-modal" class="fixed inset-x-0 bottom-0 z-50 h-[85vh] md:h-[60vh] bg-surface shadow-2xl closed flex flex-col transform border-t border-neutral-200" role="dialog" aria-modal="true" aria-labelledby="inquiry-modal-title">
+    <button id="close-inquiry-modal" class="absolute top-8 right-8 z-10 p-2 hover:bg-neutral-200 rounded-full" type="button"><span class="material-symbols-outlined text-3xl">close</span></button>
+    <div class="flex-1 overflow-y-auto px-6 py-12 md:px-20 md:py-16">
+      <div class="max-w-4xl mx-auto h-full flex flex-col">
+        <h2 id="inquiry-modal-title" class="font-serif text-3xl md:text-5xl mb-4 font-light">Let's build something iconic.</h2>
+        <p class="text-muted text-sm tracking-widest uppercase mb-8">Tell us about your vision</p>
+        <form id="inquiry-form" class="flex flex-col gap-8">
+          <input class="w-full border-0 border-b border-neutral-300 bg-transparent py-2.5 px-0 text-xl focus:border-accent focus:ring-0" placeholder="YOUR NAME" required />
+          <input class="w-full border-0 border-b border-neutral-300 bg-transparent py-2.5 px-0 text-xl focus:border-accent focus:ring-0" placeholder="EMAIL ADDRESS" type="email" required />
+          <textarea class="w-full resize-none border-0 border-b border-neutral-300 bg-transparent py-2.5 px-0 text-xl focus:border-accent focus:ring-0" placeholder="PROJECT BRIEF"></textarea>
+          <button class="font-serif text-2xl hover:text-accent flex items-center gap-4" type="submit"><span>Send Inquiry</span><span class="material-symbols-outlined">arrow_forward</span></button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script>
+    const menuToggle = document.getElementById("mobile-menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const modal = document.getElementById("inquiry-modal");
+    const openModalButton = document.getElementById("open-inquiry-modal");
+    const closeModalButton = document.getElementById("close-inquiry-modal");
+    const inquiryForm = document.getElementById("inquiry-form");
+
+    if (menuToggle && mobileMenu) {
+      menuToggle.addEventListener("click", () => {
+        const isOpen = !mobileMenu.classList.contains("hidden");
+        mobileMenu.classList.toggle("hidden");
+        menuToggle.setAttribute("aria-expanded", String(!isOpen));
+      });
+    }
+
+    function openModal() {
+      modal.classList.remove("closed");
+      modal.classList.add("open");
+    }
+
+    function closeModal() {
+      modal.classList.remove("open");
+      modal.classList.add("closed");
+    }
+
+    if (openModalButton) {
+      openModalButton.addEventListener("click", openModal);
+    }
+
+    if (closeModalButton) {
+      closeModalButton.addEventListener("click", closeModal);
+    }
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        closeModal();
+      }
+    });
+
+    if (inquiryForm) {
+      inquiryForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        alert("Inquiry received.");
+        closeModal();
+      });
+    }
+  </script>
+</body>
+</html>

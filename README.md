@@ -12,7 +12,10 @@ Static multi-page portfolio site prepared for client preview and hosting.
 ```bash
 ./build.sh
 ```
-This outputs a deployable `dist/` folder.
+This outputs:
+- `dist/` for static hosts with configurable publish dir
+- `docs/` for GitHub Pages branch deploy (`main` + `/docs`)
+- root `*.html` files for hosts that default to repository root
 
 ## Local Preview
 From the project root:

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LUMEN - Cinematic Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;400;600&family=Manrope:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#c03f0c",
+            "background-light": "#f8f6f5",
+            "background-dark": "#221510",
+            "rich-black": "#0A0A0A",
+            "soft-gray": "#F4F4F4"
+          },
+          fontFamily: {
+            display: ["Manrope", "sans-serif"],
+            serif: ["Fraunces", "serif"]
+          },
+          borderRadius: {
+            DEFAULT: "0.125rem",
+            lg: "0.25rem",
+            xl: "0.5rem",
+            full: "0.75rem"
+          },
+          transitionDuration: {
+            700: "700ms"
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    .cinematic-text-shadow { text-shadow: 0 2px 10px rgba(0,0,0,.5); }
+    @keyframes fade-in-up { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-rich-black antialiased overflow-x-hidden selection:bg-primary selection:text-white">
+  <nav class="fixed top-0 left-0 w-full z-50 mix-blend-difference text-white transition-all duration-700 ease-out py-8 px-6 md:px-12 flex justify-between items-center">
+    <a class="font-serif text-2xl md:text-3xl font-semibold tracking-tight hover:opacity-80 transition-opacity" href="./index.html">LUMEN</a>
+    <div class="flex items-center gap-8 md:gap-12">
+      <a class="group relative text-sm font-medium uppercase tracking-[0.15em]" href="./archive.html">Index<span class="absolute -bottom-1 left-0 w-0 h-[1px] bg-current transition-all duration-300 group-hover:w-full"></span></a>
+      <a class="group relative text-sm font-medium uppercase tracking-[0.15em]" href="./studio.html">Studio<span class="absolute -bottom-1 left-0 w-0 h-[1px] bg-current transition-all duration-300 group-hover:w-full"></span></a>
+    </div>
+  </nav>
+
+  <header class="relative w-full h-screen overflow-hidden bg-black">
+    <div class="absolute inset-0 w-full h-full">
+      <div class="w-full h-full bg-cover bg-center opacity-80 animate-[pulse_8s_ease-in-out_infinite]" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuDg-6sV5bv7UXo8B-gsqMYpoirSwCH97IUACuAhBMBNGfFIHos6WePIcBEF06VjGCBZJDBAWvr88ANecYVIFCUfXx3NcFcuKtrsmg1avnJXw5DxfPcBbtvKWtAl9XTAbaIQeTak9zuHgcc2wELwcLUP8OkB2zF3XEDXQFOvDfh9rMdd1qPPO8WR3q7LsrVffsfu1nUOXMhtDXvrxnMj9EHS4pxyYbu19pWwSHbbOUH4Vo2TXtELqAeFFECUSLWuB1hp6mW2JzyjwVU');"></div>
+      <div class="absolute inset-0 bg-black/20"></div>
+    </div>
+    <div class="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/70 animate-bounce duration-[2000ms]">
+      <span class="text-[10px] uppercase tracking-[0.2em] font-medium">Scroll</span>
+      <span class="material-symbols-outlined text-sm">arrow_downward</span>
+    </div>
+  </header>
+
+  <main class="relative z-10 bg-background-light dark:bg-background-dark min-h-screen">
+    <section class="flex flex-col items-center justify-center py-32 px-6 md:px-12 md:py-48 text-center">
+      <div class="max-w-[1440px] w-full mx-auto">
+        <h1 class="font-serif text-4xl md:text-6xl lg:text-[82px] leading-[1.1] font-light text-rich-black dark:text-white tracking-tight opacity-0 animate-[fade-in-up_1s_ease-out_0.5s_forwards]">We Capture Stories <br class="hidden md:block" /> That Define Brands.</h1>
+      </div>
+    </section>
+
+    <section class="w-full px-4 md:px-12 pb-32 flex flex-col items-center gap-y-20 md:gap-y-[120px]">
+      <a class="group/card relative w-full max-w-[1440px] aspect-[4/3] md:aspect-[21/9] overflow-hidden cursor-pointer rounded-sm" href="./project.html">
+        <div class="w-full h-full bg-cover bg-center transition-all duration-700 ease-out group-hover/card:scale-105 group-hover/card:brightness-75" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuDC82i63btwqRmSbZVV0rUialHwLEXtpxgo9SxNYghkjIj7HSMqzhBNLdhCCUUrp-30txD5mYwasAnGJcxBGUaNh8PhI6EPgL-66c4Ab0TV_my8riMvgCI5Q5AJxO4RnsSZH_ScassVDd03_T9sHyGmesLQ2CyczyOwe5ROQDb5oqUBp16J3QqKM9ZQi24UgsKbzJAZqUoy5tNVuc04xvMa4v4vxrg2NI7o-w_xX84oNSbqxv1HgCbGVmBra73wv1n_FbKvUV5V3RQ');"></div>
+        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover/card:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"><div class="text-center"><h2 class="font-serif text-3xl md:text-5xl text-white font-light tracking-tight cinematic-text-shadow">The Midnight Echo</h2></div></div>
+      </a>
+      <a class="group/card relative w-full max-w-[1440px] aspect-[4/3] md:aspect-[21/9] overflow-hidden cursor-pointer rounded-sm" href="./project.html">
+        <div class="w-full h-full bg-cover bg-center transition-all duration-700 ease-out group-hover/card:scale-105 group-hover/card:brightness-75" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuA1WQiO1vJv8jhwUsyOLAqbrZUeLmCbNSjKiTtAr2ByqTWVL5m_YHN91owx2MWvscp1eO2VjKlkQrpCtzJKw_mYgK8HF4obEFufVNSS7nGMhSWmThPJEI76iPrcB8llaTaIv6nYi0McQ1qKy4OrtAYM4oH5ip_Tixjq4ooL2RISYVTgKXJCd14CGD9o8WpVZ4R94-6txIlWNndjvJqir871j05AHrzUzRMLaVDRFAQxdGxEHyc6R4IzuQgQL7x_4DYY0TLJJXbRyb4');"></div>
+        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover/card:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"><div class="text-center"><h2 class="font-serif text-3xl md:text-5xl text-white font-light tracking-tight cinematic-text-shadow">Velvet &amp; Steel</h2></div></div>
+      </a>
+      <a class="group/card relative w-full max-w-[1440px] aspect-[4/3] md:aspect-[21/9] overflow-hidden cursor-pointer rounded-sm" href="./project.html">
+        <div class="w-full h-full bg-cover bg-center transition-all duration-700 ease-out group-hover/card:scale-105 group-hover/card:brightness-75" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuBag5Q-lrHsP6ELaV_hk7XndGAoIYIzdSY6ce1g4zsdigvOiGgYOLdCB2JQmEZIJZRY7xv1mEyTGH19S01_uMNvAcSyv8W5Hb8ZS7izMd9G6coUMyQ5T_91s2fpXsghxVgQGY5mANeNK669Uj4HNrD9zZswG6SXmAzgIxH9ifKRxF1wyDEcybFb1UwIfiPTRWVIYXLsOZ_u6u2QByFKNH6SMQ7xooSupI_oNocPy5DHz5qW4RpX76r54LuRMF1ShQImVgfbv0TtJ3g');"></div>
+        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover/card:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"><div class="text-center"><h2 class="font-serif text-3xl md:text-5xl text-white font-light tracking-tight cinematic-text-shadow">Neon Horizon</h2></div></div>
+      </a>
+    </section>
+
+    <footer class="w-full py-24 flex justify-center border-t border-gray-200 dark:border-gray-800">
+      <a class="group flex items-center gap-4 text-rich-black dark:text-white hover:text-primary transition-colors duration-500" href="./archive.html"><span class="font-serif text-2xl md:text-3xl italic">View Full Archive</span><span class="material-symbols-outlined transform group-hover:translate-x-2 transition-transform duration-500">arrow_forward</span></a>
+    </footer>
+  </main>
+</body>
+</html>

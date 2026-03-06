@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lumen Studio - Project Detail</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;400;600&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { primary: "#0A0A0A", accent: "#c03f0c", "background-light": "#FFFFFF", surface: "#F4F4F4", "text-main": "#1A1A1A", "text-muted": "#9CA3AF" },
+          fontFamily: { display: ["Fraunces", "serif"], body: ["Manrope", "sans-serif"], mono: ["ui-monospace", "monospace"] }
+        }
+      }
+    };
+  </script>
+  <style>
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
+</head>
+<body class="bg-background-light text-text-main antialiased overflow-x-hidden selection:bg-accent selection:text-white">
+  <nav class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-6 md:px-12 mix-blend-difference text-white">
+    <a class="font-display font-semibold text-2xl" href="./index.html">LUMEN STUDIO</a>
+    <div class="hidden md:flex items-center gap-12 text-sm font-medium tracking-wide"><a href="./archive.html">INDEX</a><a href="./studio.html">STUDIO</a></div>
+    <button id="mobile-menu-toggle" class="md:hidden p-2" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+      <span class="material-symbols-outlined text-3xl">menu</span>
+    </button>
+  </nav>
+  <div id="mobile-menu" class="hidden fixed top-20 right-6 z-50 bg-black/70 text-white backdrop-blur-md p-4 space-y-3 text-sm uppercase tracking-wider">
+    <a class="block" href="./archive.html">Index</a>
+    <a class="block" href="./studio.html">Studio</a>
+  </div>
+
+  <main>
+    <section class="relative w-full h-[85vh] md:h-screen bg-black">
+      <div class="absolute inset-0 w-full h-full bg-cover bg-center opacity-80" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuCXufeBjHXUd4pJcjZMag5tW1wrHe_fJsJh8fsdQlg0BnXiO3GSCmOVo3Apgvpd_XjQv5FdQ4z2LO_872X8kG7DLnoMvV16v8TJQ_zy3M0Iq-bbcFfZylt4-SVP6PAnithmvmsucTTTbhyEXCTANnsMkbxl6mtvbAPzWdYfbxmaVSt_eyBlqbybtKrKxqhA54WJjnX2VRRdC0f81HhJLzXivs3ZnJffUrEWJojSCdWTtIv2DShXBJcMXixnEdW3aVru4sGS7MBEmbw');"></div>
+      <div class="absolute inset-0 flex items-center justify-center"><button class="size-24 md:size-32 rounded-full border border-white/30 text-white"><span class="material-symbols-outlined text-5xl ml-1">play_arrow</span></button></div>
+    </section>
+
+    <section class="max-w-[1440px] mx-auto px-6 md:px-12 py-20 md:py-32 grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-24">
+      <div class="md:col-span-4 lg:col-span-3 space-y-8 md:sticky md:top-32 h-fit">
+        <h3 class="text-xs font-bold tracking-[0.2em] uppercase text-text-muted mb-6">Production Credits</h3>
+        <ul class="font-mono text-sm space-y-4">
+          <li><span class="text-text-muted text-xs uppercase">Director</span><br />Elena Vasquez</li>
+          <li><span class="text-text-muted text-xs uppercase">Cinematography</span><br />Marcus Thorne, ASC</li>
+          <li><span class="text-text-muted text-xs uppercase">Editor</span><br />Sarah Jenkins</li>
+        </ul>
+      </div>
+      <div class="md:col-span-8 lg:col-span-8 lg:col-start-5">
+        <h2 class="text-base md:text-lg font-medium text-text-muted mb-4">Vogue Italia</h2>
+        <h1 class="font-display text-5xl md:text-7xl lg:text-8xl font-light leading-[0.9] tracking-tight mb-8">The Silent Echo</h1>
+        <p class="text-lg md:text-xl leading-relaxed max-w-2xl">In a world increasingly defined by digital noise, <em>The Silent Echo</em> explores the profound resonance of solitude. Shot in the Dolomites, this campaign strips away artifice to reveal the human form against nature.</p>
+      </div>
+    </section>
+
+    <section class="w-full py-12 md:py-20 border-t border-black/5 bg-surface">
+      <div class="px-6 md:px-12 mb-8"><h3 class="font-display text-2xl md:text-3xl font-light">Stills Gallery</h3></div>
+      <div class="overflow-x-auto no-scrollbar pb-8 pl-6 md:pl-12 flex gap-4 md:gap-8 w-full snap-x snap-mandatory">
+        <img class="snap-start shrink-0 w-[80vw] md:w-[600px] aspect-[16/9] object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTZKPi5hZJVxn8vaYIeYnITUmrzWpW9JqhXuikqNzczgx3WL1jKQwIbq55sGKW5bmA9V3SrS-Pb900mk3aJLcmjldw8T318mFFDRVNVilCevFqbeRR7m3OYfE0ilePkOgaBzlreaXe1eQoXhI6IssPF9s87cOhsDLXpnWYkh47nqHaL9UXwPz1at0hbgTonXnHe5mEwz66pWI5VE0uvB9EFt8uBBWze9c6XTgqiDEGggTJjVvrk0ZCX89cmHv1SFOhLIH6aUOMNF0" alt="still" />
+        <img class="snap-start shrink-0 w-[80vw] md:w-[600px] aspect-[16/9] object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAe9lQnXvRS0ifhOYNk7hPmQOCayDGVHg-w3fXLHQx0lSMA8TQaY-4pmu9-pVVAKgj0OpdUARrN57V8k5FZU02D0Bm9ANBcTTKyG3lIR3nLmFdSvnCwaT7c1U27jaWP3D1tEj1ylhpaAzHLS4TLFdRa3yg8Q-Ho8_A4AaGN4GWdOvCSE5WWWIOoI2QUZxdpSfg87kB99DPU_rPEtCErpvjmM_HMX1CB5tZl0pz_Hc_Jot8PJ6gBfTZSlyT2dDDbrbsiIOW37Wwd2V0" alt="still" />
+      </div>
+    </section>
+
+    <footer class="max-w-[1440px] mx-auto px-6 md:px-12 py-24 md:py-32 flex flex-col md:flex-row justify-between items-start md:items-end border-t border-black/10">
+      <a class="block" href="./archive.html"><span class="text-sm font-medium text-text-muted uppercase tracking-widest">Back to Archive</span><h2 class="font-display text-4xl md:text-6xl font-light">The Midnight Run</h2></a>
+      <a class="flex items-center gap-4" href="./studio.html"><span class="font-display text-xl font-medium border-b border-current pb-1">Start a Project</span><span class="material-symbols-outlined">arrow_forward</span></a>
+    </footer>
+  </main>
+  <script>
+    const menuToggle = document.getElementById("mobile-menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+    if (menuToggle && mobileMenu) {
+      menuToggle.addEventListener("click", () => {
+        const isOpen = !mobileMenu.classList.contains("hidden");
+        mobileMenu.classList.toggle("hidden");
+        menuToggle.setAttribute("aria-expanded", String(!isOpen));
+      });
+    }
+  </script>
+</body>
+</html>

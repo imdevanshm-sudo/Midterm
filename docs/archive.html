@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lumen - The Archive</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;400;500;600&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#c03f0c",
+            "background-light": "#ffffff",
+            "background-dark": "#221510",
+            surface: "#F4F4F4",
+            "text-main": "#0A0A0A",
+            "text-muted": "#9CA3AF"
+          },
+          fontFamily: {
+            display: ["Fraunces", "serif"],
+            sans: ["Manrope", "sans-serif"]
+          },
+          animation: { "fade-in-up": "fadeInUp 1s ease-out forwards" },
+          keyframes: {
+            fadeInUp: {
+              "0%": { opacity: "0", transform: "translateY(20px)" },
+              "100%": { opacity: "1", transform: "translateY(0)" }
+            }
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .masonry-grid { column-count: 1; column-gap: 3rem; }
+    @media (min-width: 768px) { .masonry-grid { column-count: 2; } }
+    .masonry-item { break-inside: avoid; margin-bottom: 6rem; }
+    .hover-underline { position: relative; }
+    .hover-underline::after { content: ""; position: absolute; width: 0; height: 1px; bottom: -2px; left: 0; background-color: currentColor; transition: width .3s ease-in-out; }
+    .hover-underline:hover::after { width: 100%; }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-text-main font-sans antialiased overflow-x-hidden selection:bg-primary/20 selection:text-primary">
+  <nav class="fixed top-0 left-0 w-full z-50 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-gray-100 dark:border-white/5">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-10 py-5 flex items-center justify-between">
+      <div class="flex items-center gap-4"><span class="material-symbols-outlined text-2xl">lens_blur</span><a class="font-display text-xl font-bold tracking-tight uppercase hover:text-primary" href="./index.html">Lumen</a></div>
+      <div class="flex items-center gap-8 md:gap-12">
+        <a class="text-sm font-medium hover-underline uppercase tracking-widest text-text-main" href="./archive.html">Index</a>
+        <a class="text-sm font-medium hover-underline uppercase tracking-widest text-text-muted hover:text-text-main transition-colors" href="./studio.html">Studio</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="relative pt-32 pb-20 min-h-screen">
+    <header class="max-w-[1440px] mx-auto px-6 md:px-10 mb-20 md:mb-32">
+      <h1 class="font-display text-6xl md:text-8xl lg:text-9xl font-light tracking-tighter leading-[0.9] opacity-0 animate-[fadeInUp_1s_ease-out_forwards]">The<br />Archive</h1>
+    </header>
+
+    <div class="sticky top-[80px] z-40 w-full mb-16 md:mb-24">
+      <div class="absolute inset-0 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-lg border-b border-gray-100 dark:border-white/5"></div>
+      <div class="relative max-w-[1440px] mx-auto px-6 md:px-10 py-6 flex overflow-x-auto no-scrollbar">
+        <div class="flex gap-8 md:gap-12 items-baseline whitespace-nowrap">
+          <a class="text-sm font-bold uppercase tracking-widest text-primary border-b border-primary pb-1" href="#">All Work</a>
+          <a class="text-sm font-medium uppercase tracking-widest text-text-muted hover:text-text-main" href="#">Commercial</a>
+          <a class="text-sm font-medium uppercase tracking-widest text-text-muted hover:text-text-main" href="#">Narrative</a>
+          <a class="text-sm font-medium uppercase tracking-widest text-text-muted hover:text-text-main" href="#">Music</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="max-w-[1440px] mx-auto px-6 md:px-10">
+      <div class="masonry-grid">
+        <a class="masonry-item group block cursor-pointer opacity-0 animate-[fadeInUp_1s_ease-out_0.2s_forwards]" href="./project.html">
+          <div class="overflow-hidden bg-surface aspect-[3/4] mb-6"><img class="w-full h-full object-cover transition-transform duration-[700ms] ease-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUXymPVHTQoOGSI6ET8wnfEdIoXv5ACWRG_fkIuS0-yKdCueX9oZFrYJDRFenajVRcidLk5SZR9xWXAHrKahqnTSdMBmccxZ_ssjDjUHqh4ExyEma8pnhdyCHOJSxYMMNUVqG4V98S9LrvXFulll0FryWGywZQqli9HJzfEjic-vkpmdL-0v9W9jm6dIFbtEXd7Ng4zcHeddIyBDBpcx-UgJbsiVGGBKuk7kEcNa0ZxlfnbMkRa9zy_t8W6RsICmRKwSzKBez2TAU" alt="Cinematic portrait" /></div>
+          <h3 class="font-display text-3xl md:text-4xl font-light group-hover:text-primary">The Silent Echo</h3>
+          <p class="text-sm text-text-muted uppercase tracking-widest">Vogue / 2023</p>
+        </a>
+        <a class="masonry-item group block cursor-pointer opacity-0 animate-[fadeInUp_1s_ease-out_0.4s_forwards]" href="./project.html">
+          <div class="overflow-hidden bg-surface aspect-[4/3] mb-6"><img class="w-full h-full object-cover transition-transform duration-[700ms] ease-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDr_2I0hkO3LqhiEQc7S8bHUSOP7J53uCckYk0PGEkw_xH6c7reLb4bb2TBXGhZucei8mC2yorRkucYNfJlD_ztfyHGO5CAMMYv66IUfH2C4B6MDhTo5tVTefc90l73FOahZzfBwa6B7UwiUW3rAiJ8wGLnRQceBjRLdQ4JEkFmZDhPMpKDSjQ2GxFty54obfpqNeQ7JFMokDa4v8PHpvsh8qMjGj04MdrF9C9N3rmP0rjk6sSd7Z8mCLI-kc_U9rj7QFb9PHFOAvc" alt="Fashion model" /></div>
+          <h3 class="font-display text-3xl md:text-4xl font-light group-hover:text-primary">Ether</h3>
+          <p class="text-sm text-text-muted uppercase tracking-widest">Alexander McQueen / 2022</p>
+        </a>
+        <a class="masonry-item group block cursor-pointer opacity-0 animate-[fadeInUp_1s_ease-out_0.3s_forwards]" href="./project.html">
+          <div class="overflow-hidden bg-surface aspect-[4/3] mb-6"><img class="w-full h-full object-cover transition-transform duration-[700ms] ease-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2G9mgyz5OH1WH9TMJE15PAMMHbwgsC3mjR3s5aub_9BYiUc7_TFZEQduRtSBQPV9KdPYyn2RSc-MLvBMjFSjQbLEI7bWiC1PgUZN2MoUBVPaCIxVE6JqVan6l81ab-awUI7PnLyNF1x2RmHs2ZA2iRKUzPgenpfM6lxWcTZ_y4efyX-PTuLy8AbOKu7yFkeib5Y1qVjpuFHEvJzZIMwkhcCAfI_OJCSJcjWuTDsYMQFvLCRyG4Zd0oYGTZtL22Z4tYXMO8zxQHjw" alt="Dramatic mountain range" /></div>
+          <h3 class="font-display text-3xl md:text-4xl font-light group-hover:text-primary">Ascent</h3>
+          <p class="text-sm text-text-muted uppercase tracking-widest">The North Face / Documentary</p>
+        </a>
+        <a class="masonry-item group block cursor-pointer opacity-0 animate-[fadeInUp_1s_ease-out_0.5s_forwards]" href="./project.html">
+          <div class="overflow-hidden bg-surface aspect-[3/4] mb-6"><img class="w-full h-full object-cover transition-transform duration-[700ms] ease-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBvfHvV2tjxBk-37DVunV23OSLGMrZJuk7S0kIbmQpXRUDzJsIGKxloPbAKAi65rW-3FkjptkQeZhAA2vp0BL8pTb01wCboHRRQBaKBPVAlSpRCTRTHDDtY9h13EITc8kT9jAwCvXR3v5_yuOzn4wOXHyznXc8b-OGoUJD9sr0VHN_D4btwvcrXgDUc6ssbMEPBXtQy4-fs6kYw53egRIu6FbI5Kk24CiCMIxIfIanksxx5mHV2_sygdWYemDD8Lskr7O8eDp-Q4c" alt="Abstract architecture light" /></div>
+          <h3 class="font-display text-3xl md:text-4xl font-light group-hover:text-primary">Concrete Dreams</h3>
+          <p class="text-sm text-text-muted uppercase tracking-widest">Architectural Digest / 2024</p>
+        </a>
+        <a class="masonry-item group block cursor-pointer opacity-0 animate-[fadeInUp_1s_ease-out_0.6s_forwards]" href="./project.html">
+          <div class="overflow-hidden bg-surface aspect-[16/9] mb-6"><img class="w-full h-full object-cover transition-transform duration-[700ms] ease-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgTbVYoBN_dKusxTWQLJve36rf4W34Ao2uxx2g4_IyYwxUXU_JFE-FfUpKk9prWWEKe0JZ2vL5hFsH3uiarPUCiCli2rdrf2cKYf4MFnxwURz7TTjJuEr_gTbx_qPjb6OnPb2pvxhqzMQ23zzXAQZvfM1lTksZhxEdQrzAjf5g5s4GEycCFdN0OpvRkf9ktOgqdnohY2kGPVu1fP2JVMDeDQ7wyWYz2IonRrnvkuYGo9YdSZtycKDUvgEVNgW_Npb5gQgpENh8t9U" alt="Retro neon technology" /></div>
+          <h3 class="font-display text-3xl md:text-4xl font-light group-hover:text-primary">Analog</h3>
+          <p class="text-sm text-text-muted uppercase tracking-widest">Teenage Engineering / Commercial</p>
+        </a>
+        <a class="masonry-item group block cursor-pointer opacity-0 animate-[fadeInUp_1s_ease-out_0.7s_forwards]" href="./project.html">
+          <div class="overflow-hidden bg-surface aspect-[3/4] mb-6"><img class="w-full h-full object-cover transition-transform duration-[700ms] ease-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCefR7NEeh5NP2yiMIoV0tVs1eMg1GI377IFm2hZMFiSZ6Ag_fuDW5EYp1P-dHTaZI9JrPm4TcV6Ezo23sZeBJQU3JlbXPQyZS282US2gGzc92HhECpzMAap-GEhOO1_W0nN3WssZBhRHhFntqaCF1UNj5QNoH0IJ14PWPxnowheT3xIM4seBrDCu65-l2brQL1YS4z63dHtgFABYWFoXR0b4JuxpfJcKXtePrqOktWrOQ7aNNPeQ953QU7IhR1MXH4mWfjzEaPOOA" alt="Monochrome ceramic hands" /></div>
+          <h3 class="font-display text-3xl md:text-4xl font-light group-hover:text-primary">Ceramics</h3>
+          <p class="text-sm text-text-muted uppercase tracking-widest">Aesop / 2023</p>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="border-t border-gray-100 dark:border-white/5 bg-background-light dark:bg-background-dark py-20">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-10 flex flex-col md:flex-row justify-between gap-10">
+      <div><h2 class="font-display text-2xl font-bold mb-6">LUMEN STUDIO</h2><p class="text-sm text-text-muted">Los Angeles, CA</p><a class="text-sm text-text-muted hover:text-primary" href="mailto:hello@lumen.studio">hello@lumen.studio</a></div>
+      <div class="flex gap-8"><a class="text-sm uppercase tracking-widest text-text-muted hover:text-text-main" href="#">Instagram</a><a class="text-sm uppercase tracking-widest text-text-muted hover:text-text-main" href="#">Vimeo</a><a class="text-sm uppercase tracking-widest text-text-muted hover:text-text-main" href="#">LinkedIn</a></div>
+    </div>
+  </footer>
+</body>
+</html>
