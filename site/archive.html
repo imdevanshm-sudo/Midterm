@@ -39,9 +39,10 @@
   </script>
   <style>
     html { scroll-behavior: smooth; }
-    .masonry-grid { column-count: 1; column-gap: 3rem; }
+    .masonry-grid { column-count: 1; column-gap: 1.25rem; }
     @media (min-width: 768px) { .masonry-grid { column-count: 2; } }
-    .masonry-item { break-inside: avoid; margin-bottom: 6rem; }
+    .masonry-item { break-inside: avoid; margin-bottom: 2.5rem; }
+    @media (min-width: 768px) { .masonry-item { margin-bottom: 6rem; } }
     .hover-underline { position: relative; }
     .hover-underline::after { content: ""; position: absolute; width: 0; height: 1px; bottom: -2px; left: 0; background-color: currentColor; transition: width .3s ease-in-out; }
     .hover-underline:hover::after { width: 100%; }
@@ -60,15 +61,15 @@
     </div>
   </nav>
 
-  <main class="relative pt-32 pb-20 min-h-screen">
-    <header class="max-w-[1440px] mx-auto px-6 md:px-10 mb-20 md:mb-32">
-      <h1 class="font-display text-6xl md:text-8xl lg:text-9xl font-light tracking-tighter leading-[0.9] opacity-0 animate-[fadeInUp_1s_ease-out_forwards]">The<br />Archive</h1>
+  <main class="relative pt-24 md:pt-32 pb-16 md:pb-20 min-h-screen">
+    <header class="max-w-[1440px] mx-auto px-5 md:px-10 mb-12 md:mb-32">
+      <h1 class="font-display text-5xl md:text-8xl lg:text-9xl font-light tracking-tighter leading-[0.9] opacity-0 animate-[fadeInUp_1s_ease-out_forwards]">The<br />Archive</h1>
     </header>
 
-    <div class="sticky top-[80px] z-40 w-full mb-16 md:mb-24">
+    <div class="sticky top-[64px] md:top-[80px] z-40 w-full mb-10 md:mb-24">
       <div class="absolute inset-0 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-lg border-b border-gray-100 dark:border-white/5"></div>
-      <div class="relative max-w-[1440px] mx-auto px-6 md:px-10 py-6 flex overflow-x-auto no-scrollbar">
-        <div class="flex gap-8 md:gap-12 items-baseline whitespace-nowrap">
+      <div class="relative max-w-[1440px] mx-auto px-5 md:px-10 py-4 md:py-6 flex overflow-x-auto no-scrollbar">
+        <div class="flex gap-6 md:gap-12 items-baseline whitespace-nowrap">
           <a class="text-sm font-bold uppercase tracking-widest text-primary border-b border-primary pb-1" href="#">All Work</a>
           <a class="text-sm font-medium uppercase tracking-widest text-text-muted hover:text-text-main" href="#">Commercial</a>
           <a class="text-sm font-medium uppercase tracking-widest text-text-muted hover:text-text-main" href="#">Narrative</a>
@@ -77,35 +78,35 @@
       </div>
     </div>
 
-    <div class="max-w-[1440px] mx-auto px-6 md:px-10">
+    <div class="max-w-[1440px] mx-auto px-5 md:px-10">
       <div class="masonry-grid">
         <a class="masonry-item group block cursor-pointer opacity-0 animate-[fadeInUp_1s_ease-out_0.2s_forwards]" href="./project.html">
-          <div class="overflow-hidden bg-surface aspect-[3/4] mb-6"><img class="w-full h-full object-cover transition-transform duration-[700ms] ease-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUXymPVHTQoOGSI6ET8wnfEdIoXv5ACWRG_fkIuS0-yKdCueX9oZFrYJDRFenajVRcidLk5SZR9xWXAHrKahqnTSdMBmccxZ_ssjDjUHqh4ExyEma8pnhdyCHOJSxYMMNUVqG4V98S9LrvXFulll0FryWGywZQqli9HJzfEjic-vkpmdL-0v9W9jm6dIFbtEXd7Ng4zcHeddIyBDBpcx-UgJbsiVGGBKuk7kEcNa0ZxlfnbMkRa9zy_t8W6RsICmRKwSzKBez2TAU" alt="Cinematic portrait" /></div>
+          <div class="overflow-hidden bg-surface aspect-[3/4] mb-4 md:mb-6"><img class="w-full h-full object-cover transition-transform duration-[700ms] ease-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUXymPVHTQoOGSI6ET8wnfEdIoXv5ACWRG_fkIuS0-yKdCueX9oZFrYJDRFenajVRcidLk5SZR9xWXAHrKahqnTSdMBmccxZ_ssjDjUHqh4ExyEma8pnhdyCHOJSxYMMNUVqG4V98S9LrvXFulll0FryWGywZQqli9HJzfEjic-vkpmdL-0v9W9jm6dIFbtEXd7Ng4zcHeddIyBDBpcx-UgJbsiVGGBKuk7kEcNa0ZxlfnbMkRa9zy_t8W6RsICmRKwSzKBez2TAU" alt="Cinematic portrait" loading="lazy" decoding="async" /></div>
           <h3 class="font-display text-3xl md:text-4xl font-light group-hover:text-primary">The Silent Echo</h3>
           <p class="text-sm text-text-muted uppercase tracking-widest">Vogue / 2023</p>
         </a>
         <a class="masonry-item group block cursor-pointer opacity-0 animate-[fadeInUp_1s_ease-out_0.4s_forwards]" href="./project.html">
-          <div class="overflow-hidden bg-surface aspect-[4/3] mb-6"><img class="w-full h-full object-cover transition-transform duration-[700ms] ease-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDr_2I0hkO3LqhiEQc7S8bHUSOP7J53uCckYk0PGEkw_xH6c7reLb4bb2TBXGhZucei8mC2yorRkucYNfJlD_ztfyHGO5CAMMYv66IUfH2C4B6MDhTo5tVTefc90l73FOahZzfBwa6B7UwiUW3rAiJ8wGLnRQceBjRLdQ4JEkFmZDhPMpKDSjQ2GxFty54obfpqNeQ7JFMokDa4v8PHpvsh8qMjGj04MdrF9C9N3rmP0rjk6sSd7Z8mCLI-kc_U9rj7QFb9PHFOAvc" alt="Fashion model" /></div>
+          <div class="overflow-hidden bg-surface aspect-[4/3] mb-4 md:mb-6"><img class="w-full h-full object-cover transition-transform duration-[700ms] ease-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDr_2I0hkO3LqhiEQc7S8bHUSOP7J53uCckYk0PGEkw_xH6c7reLb4bb2TBXGhZucei8mC2yorRkucYNfJlD_ztfyHGO5CAMMYv66IUfH2C4B6MDhTo5tVTefc90l73FOahZzfBwa6B7UwiUW3rAiJ8wGLnRQceBjRLdQ4JEkFmZDhPMpKDSjQ2GxFty54obfpqNeQ7JFMokDa4v8PHpvsh8qMjGj04MdrF9C9N3rmP0rjk6sSd7Z8mCLI-kc_U9rj7QFb9PHFOAvc" alt="Fashion model" loading="lazy" decoding="async" /></div>
           <h3 class="font-display text-3xl md:text-4xl font-light group-hover:text-primary">Ether</h3>
           <p class="text-sm text-text-muted uppercase tracking-widest">Alexander McQueen / 2022</p>
         </a>
         <a class="masonry-item group block cursor-pointer opacity-0 animate-[fadeInUp_1s_ease-out_0.3s_forwards]" href="./project.html">
-          <div class="overflow-hidden bg-surface aspect-[4/3] mb-6"><img class="w-full h-full object-cover transition-transform duration-[700ms] ease-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2G9mgyz5OH1WH9TMJE15PAMMHbwgsC3mjR3s5aub_9BYiUc7_TFZEQduRtSBQPV9KdPYyn2RSc-MLvBMjFSjQbLEI7bWiC1PgUZN2MoUBVPaCIxVE6JqVan6l81ab-awUI7PnLyNF1x2RmHs2ZA2iRKUzPgenpfM6lxWcTZ_y4efyX-PTuLy8AbOKu7yFkeib5Y1qVjpuFHEvJzZIMwkhcCAfI_OJCSJcjWuTDsYMQFvLCRyG4Zd0oYGTZtL22Z4tYXMO8zxQHjw" alt="Dramatic mountain range" /></div>
+          <div class="overflow-hidden bg-surface aspect-[4/3] mb-4 md:mb-6"><img class="w-full h-full object-cover transition-transform duration-[700ms] ease-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2G9mgyz5OH1WH9TMJE15PAMMHbwgsC3mjR3s5aub_9BYiUc7_TFZEQduRtSBQPV9KdPYyn2RSc-MLvBMjFSjQbLEI7bWiC1PgUZN2MoUBVPaCIxVE6JqVan6l81ab-awUI7PnLyNF1x2RmHs2ZA2iRKUzPgenpfM6lxWcTZ_y4efyX-PTuLy8AbOKu7yFkeib5Y1qVjpuFHEvJzZIMwkhcCAfI_OJCSJcjWuTDsYMQFvLCRyG4Zd0oYGTZtL22Z4tYXMO8zxQHjw" alt="Dramatic mountain range" loading="lazy" decoding="async" /></div>
           <h3 class="font-display text-3xl md:text-4xl font-light group-hover:text-primary">Ascent</h3>
           <p class="text-sm text-text-muted uppercase tracking-widest">The North Face / Documentary</p>
         </a>
         <a class="masonry-item group block cursor-pointer opacity-0 animate-[fadeInUp_1s_ease-out_0.5s_forwards]" href="./project.html">
-          <div class="overflow-hidden bg-surface aspect-[3/4] mb-6"><img class="w-full h-full object-cover transition-transform duration-[700ms] ease-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBvfHvV2tjxBk-37DVunV23OSLGMrZJuk7S0kIbmQpXRUDzJsIGKxloPbAKAi65rW-3FkjptkQeZhAA2vp0BL8pTb01wCboHRRQBaKBPVAlSpRCTRTHDDtY9h13EITc8kT9jAwCvXR3v5_yuOzn4wOXHyznXc8b-OGoUJD9sr0VHN_D4btwvcrXgDUc6ssbMEPBXtQy4-fs6kYw53egRIu6FbI5Kk24CiCMIxIfIanksxx5mHV2_sygdWYemDD8Lskr7O8eDp-Q4c" alt="Abstract architecture light" /></div>
+          <div class="overflow-hidden bg-surface aspect-[3/4] mb-4 md:mb-6"><img class="w-full h-full object-cover transition-transform duration-[700ms] ease-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBvfHvV2tjxBk-37DVunV23OSLGMrZJuk7S0kIbmQpXRUDzJsIGKxloPbAKAi65rW-3FkjptkQeZhAA2vp0BL8pTb01wCboHRRQBaKBPVAlSpRCTRTHDDtY9h13EITc8kT9jAwCvXR3v5_yuOzn4wOXHyznXc8b-OGoUJD9sr0VHN_D4btwvcrXgDUc6ssbMEPBXtQy4-fs6kYw53egRIu6FbI5Kk24CiCMIxIfIanksxx5mHV2_sygdWYemDD8Lskr7O8eDp-Q4c" alt="Abstract architecture light" loading="lazy" decoding="async" /></div>
           <h3 class="font-display text-3xl md:text-4xl font-light group-hover:text-primary">Concrete Dreams</h3>
           <p class="text-sm text-text-muted uppercase tracking-widest">Architectural Digest / 2024</p>
         </a>
         <a class="masonry-item group block cursor-pointer opacity-0 animate-[fadeInUp_1s_ease-out_0.6s_forwards]" href="./project.html">
-          <div class="overflow-hidden bg-surface aspect-[16/9] mb-6"><img class="w-full h-full object-cover transition-transform duration-[700ms] ease-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgTbVYoBN_dKusxTWQLJve36rf4W34Ao2uxx2g4_IyYwxUXU_JFE-FfUpKk9prWWEKe0JZ2vL5hFsH3uiarPUCiCli2rdrf2cKYf4MFnxwURz7TTjJuEr_gTbx_qPjb6OnPb2pvxhqzMQ23zzXAQZvfM1lTksZhxEdQrzAjf5g5s4GEycCFdN0OpvRkf9ktOgqdnohY2kGPVu1fP2JVMDeDQ7wyWYz2IonRrnvkuYGo9YdSZtycKDUvgEVNgW_Npb5gQgpENh8t9U" alt="Retro neon technology" /></div>
+          <div class="overflow-hidden bg-surface aspect-[16/9] mb-4 md:mb-6"><img class="w-full h-full object-cover transition-transform duration-[700ms] ease-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgTbVYoBN_dKusxTWQLJve36rf4W34Ao2uxx2g4_IyYwxUXU_JFE-FfUpKk9prWWEKe0JZ2vL5hFsH3uiarPUCiCli2rdrf2cKYf4MFnxwURz7TTjJuEr_gTbx_qPjb6OnPb2pvxhqzMQ23zzXAQZvfM1lTksZhxEdQrzAjf5g5s4GEycCFdN0OpvRkf9ktOgqdnohY2kGPVu1fP2JVMDeDQ7wyWYz2IonRrnvkuYGo9YdSZtycKDUvgEVNgW_Npb5gQgpENh8t9U" alt="Retro neon technology" loading="lazy" decoding="async" /></div>
           <h3 class="font-display text-3xl md:text-4xl font-light group-hover:text-primary">Analog</h3>
           <p class="text-sm text-text-muted uppercase tracking-widest">Teenage Engineering / Commercial</p>
         </a>
         <a class="masonry-item group block cursor-pointer opacity-0 animate-[fadeInUp_1s_ease-out_0.7s_forwards]" href="./project.html">
-          <div class="overflow-hidden bg-surface aspect-[3/4] mb-6"><img class="w-full h-full object-cover transition-transform duration-[700ms] ease-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCefR7NEeh5NP2yiMIoV0tVs1eMg1GI377IFm2hZMFiSZ6Ag_fuDW5EYp1P-dHTaZI9JrPm4TcV6Ezo23sZeBJQU3JlbXPQyZS282US2gGzc92HhECpzMAap-GEhOO1_W0nN3WssZBhRHhFntqaCF1UNj5QNoH0IJ14PWPxnowheT3xIM4seBrDCu65-l2brQL1YS4z63dHtgFABYWFoXR0b4JuxpfJcKXtePrqOktWrOQ7aNNPeQ953QU7IhR1MXH4mWfjzEaPOOA" alt="Monochrome ceramic hands" /></div>
+          <div class="overflow-hidden bg-surface aspect-[3/4] mb-4 md:mb-6"><img class="w-full h-full object-cover transition-transform duration-[700ms] ease-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCefR7NEeh5NP2yiMIoV0tVs1eMg1GI377IFm2hZMFiSZ6Ag_fuDW5EYp1P-dHTaZI9JrPm4TcV6Ezo23sZeBJQU3JlbXPQyZS282US2gGzc92HhECpzMAap-GEhOO1_W0nN3WssZBhRHhFntqaCF1UNj5QNoH0IJ14PWPxnowheT3xIM4seBrDCu65-l2brQL1YS4z63dHtgFABYWFoXR0b4JuxpfJcKXtePrqOktWrOQ7aNNPeQ953QU7IhR1MXH4mWfjzEaPOOA" alt="Monochrome ceramic hands" loading="lazy" decoding="async" /></div>
           <h3 class="font-display text-3xl md:text-4xl font-light group-hover:text-primary">Ceramics</h3>
           <p class="text-sm text-text-muted uppercase tracking-widest">Aesop / 2023</p>
         </a>

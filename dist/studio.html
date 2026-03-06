@@ -56,22 +56,22 @@
       </button>
     </div>
   </header>
-  <div id="mobile-menu" class="hidden fixed top-20 right-6 z-50 bg-black/70 text-white backdrop-blur-md p-4 space-y-3 text-sm uppercase tracking-wider">
+  <div id="mobile-menu" class="hidden fixed top-16 right-4 z-50 bg-black/70 text-white backdrop-blur-md p-4 space-y-3 text-sm uppercase tracking-wider">
     <a class="block" href="./archive.html">Index</a>
     <a class="block line-through" href="./studio.html">Studio</a>
   </div>
 
   <main class="flex flex-col lg:flex-row min-h-screen w-full">
-    <div class="relative w-full lg:w-1/2 h-[60vh] lg:h-screen lg:fixed lg:top-0 lg:left-0 z-0 bg-neutral-900 overflow-hidden">
+    <div class="relative w-full lg:w-1/2 h-[52vh] lg:h-screen lg:fixed lg:top-0 lg:left-0 z-0 bg-neutral-900 overflow-hidden">
       <div class="absolute inset-0 bg-black/20 z-10"></div>
-      <img class="w-full h-full object-cover grayscale opacity-90 hover:scale-105 transition-transform duration-[2000ms] ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBww-vR9kuE7eFdjWyEC2Cy7zM9SgPJz-Ri_NuyLhM6ggJZ-ye4HloLaT2IcxmCEC25E2JvKFFcrdNN_ZsClCw9YHATKVpeJ6yHOqoYWnaQpNIICYOzfSdUoquKqVTpZObnMqblCBt_EZmE9XZih1jiFVQLCTMxXxBy6Qf53BjpXGlPiJ_-LoaHcFJuDOI7NHaZZ3RezFoH6cC-1RGPR11xXQQlN1OLNeuLNtvihxeixewdhntHw1Nt4Vs3AndKjoYf6C-qzw8kZrs" alt="Team portrait" />
+      <img class="w-full h-full object-cover grayscale opacity-90 hover:scale-105 transition-transform duration-[2000ms] ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBww-vR9kuE7eFdjWyEC2Cy7zM9SgPJz-Ri_NuyLhM6ggJZ-ye4HloLaT2IcxmCEC25E2JvKFFcrdNN_ZsClCw9YHATKVpeJ6yHOqoYWnaQpNIICYOzfSdUoquKqVTpZObnMqblCBt_EZmE9XZih1jiFVQLCTMxXxBy6Qf53BjpXGlPiJ_-LoaHcFJuDOI7NHaZZ3RezFoH6cC-1RGPR11xXQQlN1OLNeuLNtvihxeixewdhntHw1Nt4Vs3AndKjoYf6C-qzw8kZrs" alt="Team portrait" loading="eager" decoding="async" />
     </div>
 
     <div class="w-full lg:w-1/2 lg:ml-[50%] bg-background-light relative z-10 min-h-screen">
-      <div class="px-6 py-20 md:px-16 md:py-32 lg:px-24 lg:py-40 max-w-3xl mx-auto flex flex-col gap-32">
+      <div class="px-5 py-14 md:px-16 md:py-32 lg:px-24 lg:py-40 max-w-3xl mx-auto flex flex-col gap-20 md:gap-32">
         <section class="flex flex-col gap-8 opacity-0 animate-fade-in" style="animation-delay: .2s;">
           <span class="text-xs font-bold tracking-[0.25em] text-muted uppercase">The Collective</span>
-          <h1 class="font-serif text-4xl md:text-5xl lg:text-[3.5rem] leading-[1.1] font-light">We do not just shoot footage. We sculpt light.<span class="block mt-8 text-primary/80">We believe that brand identity is a narrative arc, not a logo placement.</span></h1>
+          <h1 class="font-serif text-3xl md:text-5xl lg:text-[3.5rem] leading-[1.12] font-light">We do not just shoot footage. We sculpt light.<span class="block mt-6 md:mt-8 text-primary/80">We believe that brand identity is a narrative arc, not a logo placement.</span></h1>
           <p class="text-lg md:text-xl text-primary/70 leading-relaxed">Lumen is a multidisciplinary studio operating at the intersection of cinema and commerce.</p>
         </section>
 
@@ -85,19 +85,19 @@
           </div>
         </section>
 
-        <section class="flex flex-col gap-8 pt-20">
+        <section class="flex flex-col gap-8 pt-10 md:pt-20">
           <div class="w-full h-px bg-neutral-200"></div>
           <span class="text-xs font-bold tracking-[0.25em] text-muted uppercase">Inquiry</span>
           <p class="text-primary/60">Start a conversation.</p>
-          <a class="font-serif text-4xl md:text-6xl leading-none tracking-tight hover:text-accent" href="mailto:hello@lumen.studio">hello@lumen.studio</a>
-          <button id="open-inquiry-modal" class="group flex items-center gap-3 text-sm font-medium tracking-wide border-b border-primary/20 pb-1 hover:border-accent" type="button"><span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span><span class="group-hover:text-accent">START A PROJECT</span></button>
+          <a class="font-serif text-3xl md:text-6xl leading-none tracking-tight hover:text-accent break-all md:break-normal" href="mailto:hello@lumen.studio">hello@lumen.studio</a>
+          <button id="open-inquiry-modal" class="group inline-flex w-fit items-center gap-3 text-sm font-medium tracking-wide border-b border-primary/20 pb-1 hover:border-accent min-h-10" type="button"><span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span><span class="group-hover:text-accent">START A PROJECT</span></button>
           <div class="pt-20 pb-10 flex flex-col md:flex-row justify-between text-xs text-muted uppercase tracking-widest gap-4"><p>© 2026 Lumen Studio.</p><div class="flex gap-6"><a href="#">Instagram</a><a href="#">Vimeo</a><a href="#">LinkedIn</a></div></div>
         </section>
       </div>
     </div>
   </main>
 
-  <div id="inquiry-modal" class="fixed inset-x-0 bottom-0 z-50 h-[85vh] md:h-[60vh] bg-surface shadow-2xl closed flex flex-col transform border-t border-neutral-200" role="dialog" aria-modal="true" aria-labelledby="inquiry-modal-title">
+  <div id="inquiry-modal" class="fixed inset-x-0 bottom-0 z-50 h-[88vh] md:h-[60vh] bg-surface shadow-2xl closed flex flex-col transform border-t border-neutral-200" role="dialog" aria-modal="true" aria-labelledby="inquiry-modal-title">
     <button id="close-inquiry-modal" class="absolute top-8 right-8 z-10 p-2 hover:bg-neutral-200 rounded-full" type="button"><span class="material-symbols-outlined text-3xl">close</span></button>
     <div class="flex-1 overflow-y-auto px-6 py-12 md:px-20 md:py-16">
       <div class="max-w-4xl mx-auto h-full flex flex-col">
@@ -131,11 +131,13 @@
     function openModal() {
       modal.classList.remove("closed");
       modal.classList.add("open");
+      document.body.classList.add("overflow-hidden");
     }
 
     function closeModal() {
       modal.classList.remove("open");
       modal.classList.add("closed");
+      document.body.classList.remove("overflow-hidden");
     }
 
     if (openModalButton) {
