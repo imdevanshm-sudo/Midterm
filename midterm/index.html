@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Devansh Gupta | Space Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --space-dark: #050814;
+      --space-gradient: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+      --neon-blue: #00f3ff;
+      --neon-purple: #9d4edd;
+      --text-main: #e2e8f0;
+      --text-muted: #94a3b8;
+      --glass-bg: rgba(255, 255, 255, 0.03);
+      --glass-border: rgba(255, 255, 255, 0.1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Open Sans", sans-serif;
+      background: var(--space-gradient);
+      background-attachment: fixed;
+      color: var(--text-main);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image:
+        radial-gradient(2px 2px at 20px 30px, #ffffff, rgba(0, 0, 0, 0)),
+        radial-gradient(2px 2px at 40px 70px, #ffffff, rgba(0, 0, 0, 0)),
+        radial-gradient(2px 2px at 50px 160px, #ffffff, rgba(0, 0, 0, 0)),
+        radial-gradient(2px 2px at 90px 40px, #ffffff, rgba(0, 0, 0, 0)),
+        radial-gradient(2px 2px at 130px 80px, #ffffff, rgba(0, 0, 0, 0));
+      background-repeat: repeat;
+      background-size: 200px 200px;
+      opacity: 0.3;
+      z-index: -1;
+      animation: twinkle 5s infinite alternate;
+    }
+
+    @keyframes twinkle {
+      0% {
+        opacity: 0.2;
+      }
+
+      100% {
+        opacity: 0.5;
+      }
+    }
+
+    h1, h2, h3, .logo {
+      font-family: "Poppins", sans-serif;
+      color: #ffffff;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(5, 8, 20, 0.8);
+      backdrop-filter: blur(10px);
+      padding: 20px 50px;
+      border-bottom: 1px solid var(--glass-border);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--neon-blue);
+      text-shadow: 0 0 10px rgba(0, 243, 255, 0.5);
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-main);
+      font-weight: 600;
+      transition: color 0.3s ease, text-shadow 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--neon-blue);
+      text-shadow: 0 0 8px var(--neon-blue);
+    }
+
+    .hero {
+      text-align: center;
+      padding: 150px 20px;
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+      margin-bottom: 10px;
+      letter-spacing: 2px;
+    }
+
+    .highlight {
+      background: linear-gradient(90deg, var(--neon-blue), var(--neon-purple));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 20px rgba(157, 78, 221, 0.3);
+    }
+
+    .tagline {
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: var(--text-main);
+      margin-bottom: 15px;
+    }
+
+    .sub-tagline {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      margin-bottom: 40px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .btn {
+      display: inline-block;
+      background: transparent;
+      color: var(--neon-blue);
+      padding: 12px 35px;
+      text-decoration: none;
+      border-radius: 30px;
+      border: 2px solid var(--neon-blue);
+      font-weight: 600;
+      font-family: "Poppins", sans-serif;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 10px rgba(0, 243, 255, 0.2);
+    }
+
+    .btn:hover {
+      background: var(--neon-blue);
+      color: #000000;
+      box-shadow: 0 0 20px var(--neon-blue), 0 0 40px var(--neon-blue);
+      transform: scale(1.05);
+    }
+
+    .section {
+      padding: 100px 50px;
+      text-align: center;
+    }
+
+    .section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 50px;
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    }
+
+    .about-content {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1.15rem;
+      color: var(--text-muted);
+    }
+
+    .about-content p {
+      margin-bottom: 20px;
+    }
+
+    .highlight-text {
+      color: var(--neon-blue);
+      font-weight: 600;
+    }
+
+    .grid-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: var(--glass-bg);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid var(--glass-border);
+      padding: 40px 30px;
+      border-radius: 16px;
+      flex: 1 1 300px;
+      transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+      text-align: left;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      border-color: var(--neon-purple);
+      box-shadow: 0 10px 30px rgba(157, 78, 221, 0.2);
+    }
+
+    .card h3 {
+      margin-bottom: 20px;
+      color: var(--neon-blue);
+      font-size: 1.4rem;
+    }
+
+    .card p {
+      margin-bottom: 10px;
+      color: var(--text-muted);
+    }
+
+    .contact-info {
+      margin-top: 30px;
+      background: var(--glass-bg);
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--glass-border);
+      display: inline-block;
+      padding: 30px 50px;
+      border-radius: 16px;
+    }
+
+    .contact-info p {
+      margin: 15px 0;
+      font-size: 1.2rem;
+    }
+
+    .contact-link {
+      color: var(--neon-purple);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease, text-shadow 0.3s ease;
+    }
+
+    .contact-link:hover {
+      color: var(--neon-blue);
+      text-shadow: 0 0 10px var(--neon-blue);
+    }
+
+    .footer {
+      text-align: center;
+      padding: 30px 20px;
+      border-top: 1px solid var(--glass-border);
+      background: rgba(5, 8, 20, 0.9);
+    }
+
+    .footer p {
+      margin-bottom: 5px;
+      color: var(--text-muted);
+    }
+
+    .footer-note {
+      font-size: 0.85rem;
+      opacity: 0.6;
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+      }
+
+      .hero {
+        padding: 100px 20px;
+      }
+
+      .hero h1 {
+        font-size: 2.8rem;
+      }
+
+      .section {
+        padding: 60px 20px;
+      }
+
+      .card {
+        padding: 30px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">Devansh.</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Universes</a></li>
+      <li><a href="#contact">Comm-Link</a></li>
+    </ul>
+  </nav>
+
+  <header id="home" class="hero">
+    <h1><span class="highlight">Devansh Gupta</span></h1>
+    <p class="tagline">Digital Business Entrepreneur &amp; Coder</p>
+    <p class="sub-tagline">
+      BBA DBE @ IIM Bangalore | BA Japanese @ BHU
+      <br>
+      Building the future of digital ecosystems through code, communication, and strategy.
+    </p>
+    <a href="#contact" class="btn">Establish Contact</a>
+  </header>
+
+  <section id="about" class="section">
+    <h2>About My Journey</h2>
+    <div class="about-content">
+      <p>I am exploring the intersection of technology, culture, and business. Currently pursuing my <span class="highlight-text">BBA in Digital Business Entrepreneurship at IIM Bangalore</span>, while simultaneously diving into languages with a <span class="highlight-text">BA in Japanese from BHU</span>.</p>
+      <p>I am a passionate coder who loves bringing ideas to life on the web. Beyond the screen, I am a dedicated music enthusiast and pride myself on strong interpersonal communication because great businesses and great software both rely on connecting with people.</p>
+    </div>
+  </section>
+
+  <section id="skills" class="section">
+    <h2>Arsenal &amp; Skills</h2>
+    <div class="grid-container">
+      <div class="card">
+        <h3>Entrepreneurship</h3>
+        <p>&bull; Digital Business Strategy</p>
+        <p>&bull; Startup Ecosystems</p>
+        <p>&bull; Strong Communication</p>
+        <p>&bull; Leadership &amp; Management</p>
+      </div>
+      <div class="card">
+        <h3>Technical Coding</h3>
+        <p>&bull; Web Development</p>
+        <p>&bull; HTML5, CSS3, JavaScript</p>
+        <p>&bull; UI/UX Ideation</p>
+        <p>&bull; Problem Solving Logic</p>
+      </div>
+      <div class="card">
+        <h3>Culture &amp; Interests</h3>
+        <p>&bull; Japanese Language (BA)</p>
+        <p>&bull; Music Enthusiast</p>
+        <p>&bull; Cross-Cultural Comms</p>
+        <p>&bull; Creative Ideation</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="section">
+    <h2>Current Universes (Projects)</h2>
+    <div class="grid-container">
+      <div class="card project-card">
+        <h3>Exsoverse</h3>
+        <p>A digital ecosystem and entrepreneurial venture I am currently building. Fusing modern technology with digital business principles to create a unique user experience.</p>
+      </div>
+      <div class="card project-card">
+        <h3>Jeeniverse</h3>
+        <p>An ongoing passion project focusing on innovative digital solutions. Expanding my coding capabilities while building a platform designed for the future.</p>
+      </div>
+      <div class="card project-card">
+        <h3>Space Portfolio</h3>
+        <p>This very resume. Built using advanced CSS glassmorphism, CSS variables, Flexbox, and neon lighting effects to fulfill college project requirements.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Transmit a Message</h2>
+    <p style="color: var(--text-muted); margin-bottom: 20px;">Open for collaborations, coding projects, or just talking about music and space.</p>
+    <div class="contact-info">
+      <p>Email: <a href="mailto:devanshgup25@iimb.ac.in" class="contact-link">devanshgup25@iimb.ac.in</a></p>
+      <p>Instagram: <a href="https://instagram.com/devanshpost" target="_blank" rel="noreferrer" class="contact-link">@devanshpost</a></p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2026 Devansh Gupta | Exploring the Digital Cosmos</p>
+    <p class="footer-note">College Project Submission: CSS Design &amp; Glassmorphism Implementation</p>
+  </footer>
+</body>
+</html>
